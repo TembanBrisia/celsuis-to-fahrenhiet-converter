@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Celsius to Fahrenheit Converter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+     position: relative;
+     left: 400px;
+    }
+    input, button {
+      font-size: 18px;
+      padding: 8px 12px;
+      margin: 10px 0;
+      color: blue;
+    }
+    #result {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 20px;
+      color: red;
+      margin: 20px;
+    }
+    .container{
+        background-color: cornflowerblue;
+        height: 300px;
+        width: 500px;
+    }
+    
+h1{
+    padding-top: 33px;
+}
+
+    
+  </style>
+</head>
+<body>
+    <div class="container">
+  <h1>Celsius to Fahrenheit Converter</h1>
+  <input type="number" id="celsius" placeholder="Enter temperature in Celsius"><br>
+  <div id="result"></div>
+  <button onclick="display()">Convert</button>
+  
+</div>
+  <script>
+         /*
+         Start
+         1.retrieving value from the input field
+         2.apply the celsuis to fahrenheit formula
+         3.update the results div with the fahrenheit temperature
+         End
+       */
+     /* geting elements , that is retrieving value from the input field*/
+    function display() {
+      var celsius = document.getElementById("celsius").value;
+
+      /*** formula to calculate fahrenheit. that is it able to convert from celcuis to fahrebhiet*/
+      var fahrenheit = (celsius * 9/5) + 32;
+
+      /**the results is to display the content and the equivilence of °C in  °F*/
+      document.getElementById("result").textContent = celsius + "°C is equal to " + fahrenheit.toFixed() + "°F";
+    }
+  </script>
+</body>
+</html>
